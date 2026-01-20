@@ -1,6 +1,7 @@
 #include "Board.hpp"
 #include <iostream>
-
+#include <string>
+#include <algorithm>
 Board::Board()
 {
     for (int row = 0; row < 8; row++)
@@ -25,4 +26,12 @@ void Board::display() const
         }
         std::cout << "\n";
     }
+}
+
+void Board::getCoordonate()
+{
+    std::cout << "Entrer la case: ";
+    std::cin >> userInput;
+    std::transform(userInput.begin(), userInput.end(), userInput.begin(), ::toupper);
+    std::cout << "La valeur est : " << userInput;
 }

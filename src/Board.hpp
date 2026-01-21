@@ -3,10 +3,8 @@ class Board
 {
 private:
     char grid[8][8];
-    std::string userInput;
 
 public:
-    Board(); // constructeur
+    Board(); // constructor
     void display() const;
-    void getCoordonate();
 };

@@ -3,10 +3,10 @@
 echo Start compiling file
 cd src
 rm ./chess.exe
-g++ main.cpp Board.cpp -o chess
+g++ main.cpp Board.cpp Game.cpp -o chess
 
 if ERRORLEVEL 0 GoTo Success
-else GoTo Failure
+else if ERRORLEVEL 1 GoTo Failure
 
 :Failure
 echo error in compilation, please check the error logs file

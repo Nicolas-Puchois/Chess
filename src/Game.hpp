@@ -2,7 +2,9 @@
 class Game
 {
 public:
+    std::string userInput;
+
     Game(); // constructor
     std::string saveUserInput();
-    std::string Userinput;
+    bool UserInputIsValid(std::string);
 };

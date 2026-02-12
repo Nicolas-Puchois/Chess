@@ -8,4 +8,5 @@ int main()
     Game game;
     board.display();
     game.saveUserInput();
+    game.UserInputIsValid(game.userInput);
 }

@@ -16,7 +16,6 @@ std::string Game::saveUserInput()
         << "Entrer la case: ";
     std::cin >> userInputValue;
     std::transform(userInputValue.begin(), userInputValue.end(), userInputValue.begin(), ::toupper);
-    std::cout << "La valeur est : " << userInputValue;
     this->userInput = userInputValue;
     return userInputValue;
 };
@@ -28,7 +27,6 @@ bool Game::UserInputIsValid(std::string userInputValue)
     bool isInputTwoCharLong = userInputValue.length() == 2;
     if (!isInputTwoCharLong)
     {
-        std::cout << inputIsValid;
         return inputIsValid;
     }
     if (userInputValue[0] >= 'A' && userInputValue[0] <= 'H')
@@ -38,6 +36,14 @@ bool Game::UserInputIsValid(std::string userInputValue)
             inputIsValid = true;
         }
     }
-    std::cout << inputIsValid;
     return inputIsValid;
+}
+
+bool Game::convertEntryintoCoordonnees(std::string userInputValue, int &row, int &col)
+{
+    int firstCharIntoAscii = int(userInputValue[0]);
+    int firstCharIntoCoodonate = firstCharIntoAscii - 'A';
+    int secondCharIntoAscii = int(userInputValue[1]);
+    int secondCharIntoCoodonate = secondCharIntoAscii - '1';
+    return true;
 }

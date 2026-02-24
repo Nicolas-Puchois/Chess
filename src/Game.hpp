@@ -7,4 +7,5 @@ public:
     Game(); // constructor
     std::string saveUserInput();
     bool UserInputIsValid(std::string);
+    bool convertEntryintoCoordonnees(std::string, int &, int &);
 };
